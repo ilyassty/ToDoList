@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    --color2: #039BAC;
+    --color1: #7BBFCF;
+    --color3: #048588;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", "Arial", sans-serif;
+}
+
+body {
+    height: 100dvh;
+    .nav__bar {
+        width: 80vw;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        img {
+            height: 50px;
+            cursor: pointer;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+    
+            
+            ul {
+                display: flex;
+                gap: 40px;
+                li {
+                    list-style: none;
+                    a {
+                        padding: 10px;
+                        cursor: pointer;
+                        color: var(--color2);
+                        text-decoration: none;
+                        &:hover {
+                            border-radius: 5px;
+                            color: #FFF;
+                            background-color: var(--color2);
+                        }
+                    }
+    
+                }
+            }
+    
+        }
+        button {
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            color: #FFF;
+            cursor: pointer;
+            background-color: var(--color3);
+            &:hover {
+                background-color: var(--color2);
+            }
+        }
+    }
+
+    
+    
+    .main {
+        height: 85dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        background-color: #7ABFD3;
+    }
+    
+    .todoList {
+        width: 50vw;
+        background-color: #FFF;
+        border-radius: 5px;
+        flex-grow: 1;
+        .head {
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            border-radius: 5px 5px 0 0;
+            color: #FFF;
+            background-color: var(--color2);
+            .tasks {
+                flex: 5;
+            }
+            .dueDate {
+                flex: 2;
+            }
+            .action {
+                flex: 1;
+            }
+        }
+        .list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px 0;
+            div {
+                padding: 0 10px;
+                display: flex;
+                gap: 10px;
+            }
+            div:nth-child(1) {
+                flex: 5;
+            }
+            div:nth-child(2) {
+                flex: 2;
+            }
+            button {
+                flex: 1;
+                border: none;
+                color: red;
+                background-color: transparent;
+                cursor: pointer;
+                &:hover {
+                    border-radius: 5px;
+                    color: #FFF;
+                    background-color: red;
+                }
+            }
+            
+        }
+    }
+
+    .addTodo {
+        width: 50vw;
+        background-color: #FFF;
+        border-radius: 5px;
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+        input{
+            padding: 10px;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            flex: 5;
+            font-size: 16;
+            &#date {
+                flex: 2;
+                cursor: pointer;
+            }
+        }
+        button {
+            flex: 1;
+            font-weight: 600;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            color: #FFF;
+            background-color: var(--color3);
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--color2);
+            }
+        }
+    }
+}

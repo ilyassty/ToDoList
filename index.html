@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +7,34 @@
     <title>ToDoList App</title>
 </head>
 <body>
-    
+    <div class="nav__bar">
+        <a href="#">
+            <img src="/images/Logo.jpg" alt="Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">work</a></li>
+                <li><a href="#">Account</a></li>
+            </ul>
+        </nav>
+        <button>Contact</button>
+    </div>
+    <div class="main">
+        <div class="todoList">
+            <div class="head">
+                <text class="tasks">Tasks</text>
+                <text class="dueDate">Due date</text>
+                <text class="action">Action</text>
+            </div>
+            <div class="list"></div>
+        </div>
+        <div class="addTodo">
+            <input type="text" class="js-task" placeholder="Add Task To Do">
+            <input type="date" class="js-date" id="date">
+            <button onclick="addTodo();">ADD</button>
+        </div>
+    </div>
     <script src="/script.js"></script>
 </body>
 </html>
