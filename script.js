@@ -15,6 +15,12 @@ function addTodo () {
     loadList();
 };
 
+function deleteToDo(i) {
+    todoList.splice(i,1);
+    localStorage.setItem('list', JSON.stringify(todoList));
+    loadList();
+}
+
 function loadList() {
     let todoListHTML = '';
     for (i=0; i<todoList.length; i++) {
@@ -32,8 +38,18 @@ function loadList() {
     document.querySelector('.list').innerHTML = todoListHTML;
 }
 
-function deleteToDo(i) {
-    todoList.splice(i,1);
-    localStorage.setItem('list', JSON.stringify(todoList));
-    loadList();
-}
+/*function loadList2 () {
+    let todoListHTML = '';
+    todoList.forEach((element, i) => {
+        const html = `
+            <div>
+                <div>${element.name}</div>
+                <div>${element.date}</div>
+                <button onclick="deleteToDo(${i})">Delete</button>
+            </div>
+        `;
+        todoListHTML += html;
+        console.log(todoListHTML);
+    });
+    document.querySelector('.list').innerHTML = todoListHTML;
+}*/
